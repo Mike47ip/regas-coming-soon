@@ -1,5 +1,4 @@
-// app\page.js
-'use client';
+"use client";
 
 import React, { useState, useEffect } from "react";
 import { 
@@ -74,12 +73,11 @@ export default function ComingSoon() {
         <div className="mb-12 animate-fade-in-up" style={{animationDelay: '0s'}}>
           <div className="w-24 h-24 mx-auto mb-6 bg-white/60 backdrop-blur-sm rounded-2xl p-4 shadow-lg transform hover:scale-110 transition-transform duration-300 border-2 border-red-200">
             <img 
-              src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=200&q=80" 
-              alt="Company Logo"
+              src="/assets/images/regas-logo.jpg" 
+              alt="Regas Autoshop Logo"
               className="w-full h-full object-contain rounded-lg"
             />
           </div>
-          <p className="text-sm text-gray-500 font-['Outfit'] italic">Replace with your company logo/image</p>
         </div>
         
         {/* Animated Coming Soon Badge */}
