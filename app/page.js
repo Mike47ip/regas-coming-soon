@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useState, useEffect } from "react";
 import { 
@@ -47,7 +47,7 @@ export default function ComingSoon() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-red-50 overflow-hidden flex items-center justify-center relative">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-blue-50 overflow-hidden flex items-center justify-center relative">
       {/* Animated Background Blobs */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-96 h-96 bg-red-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
@@ -92,10 +92,12 @@ export default function ComingSoon() {
         <div className="mb-8 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-4 leading-tight font-['Outfit']">
             We're Building
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500 block">Something Amazing</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 block">Something Amazing</span>
           </h1>
           <p className="text-xl text-gray-600 font-['Outfit'] max-w-xl mx-auto">
-            Regas Autoshop is under construction. We're upgrading our services to give you the best automotive experience in Highgate.
+            TheREGASgroup is under construction.
+            <br />
+            We're upgrading our site to users, establishing comfort and results.
           </p>
         </div>
 
@@ -114,7 +116,7 @@ export default function ComingSoon() {
                 className="bg-white/60 backdrop-blur-sm rounded-xl p-4 shadow-lg transform hover:scale-105 transition-transform duration-300 animate-fade-in-up"
                 style={{animationDelay: `${0.4 + idx * 0.1}s`}}
               >
-                <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500 font-['Outfit']">
+                <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 font-['Outfit']">
                   {String(item.value).padStart(2, '0')}
                 </div>
                 <div className="text-xs md:text-sm text-gray-600 mt-2 font-['Outfit']">{item.label}</div>
@@ -133,12 +135,12 @@ export default function ComingSoon() {
               onChange={(e) => setEmail(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSubmit()}
               placeholder="Enter your email"
-              className="flex-1 px-6 py-4 rounded-xl bg-white/70 backdrop-blur-sm border-2 border-red-200 focus:border-red-600 focus:outline-none transition-colors duration-200 font-['Outfit'] placeholder-gray-400"
+              className="flex-1 px-6 py-4 rounded-xl bg-white/70 backdrop-blur-sm border-2 border-blue-300 focus:border-blue-600 focus:outline-none transition-colors duration-200 font-['Outfit'] placeholder-gray-400"
               required
             />
             <button
               onClick={handleSubmit}
-              className="bg-gradient-to-r from-red-600 to-orange-500 text-white px-8 py-4 rounded-xl hover:from-red-700 hover:to-orange-600 transition-all duration-200 font-semibold whitespace-nowrap hover:shadow-lg transform hover:scale-105 font-['Outfit']"
+              className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 text-white px-8 py-4 rounded-xl hover:from-blue-700 hover:via-blue-600 hover:to-blue-500 transition-all duration-200 font-semibold whitespace-nowrap hover:shadow-lg transform hover:scale-105 font-['Outfit']"
             >
               {submitted ? '✓ Subscribed!' : 'Notify Me'}
             </button>
@@ -153,7 +155,14 @@ export default function ComingSoon() {
         {/* Contact Options */}
         <div className="animate-fade-in-up" style={{animationDelay: '0.9s'}}>
           <p className="text-gray-700 font-semibold mb-6 font-['Outfit']">Need us urgently? Get in touch</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
+            <a 
+              href="tel:+233203144536"
+              className="flex items-center justify-center space-x-2 bg-white/60 backdrop-blur-sm text-blue-600 px-6 py-3 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-200 font-semibold hover:scale-105 transform font-['Outfit']"
+            >
+              <Phone className="w-5 h-5" />
+              <span>020 3144 536</span>
+            </a>
             <a 
               href="tel:+233249567725"
               className="flex items-center justify-center space-x-2 bg-white/60 backdrop-blur-sm text-red-600 px-6 py-3 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-200 font-semibold hover:scale-105 transform font-['Outfit']"
